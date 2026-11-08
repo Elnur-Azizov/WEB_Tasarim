@@ -1,0 +1,147 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Odev</title>
+<style>
+body { font: 13px Arial, Helvetica, sans-serif; background: #eee; }
+a { text-decoration: none; color: #333; }
+#kutu { width: 820px; margin: 20px auto; padding: 10px; background: #fff; overflow: hidden; }
+
+/* ===== 1) YAN MENU ===== */
+#yan { float: left; width: 200px; margin: 0; padding: 0; list-style: none; border: 1px solid #ccc; }
+#yan li { position: relative; }
+#yan a { display: block; padding: 8px; border-bottom: 1px solid #eee; font-weight: bold; }
+#yan a:hover { background: #f60; color: #fff; }
+#yan span { float: right; color: #f60; }
+#yan ul { display: none; position: absolute; left: 200px; top: 0; width: 160px; margin: 0; padding: 0; list-style: none; background: #fff; border: 1px solid #ccc; z-index: 5; }
+#yan li:hover > ul { display: block; }
+#yan ul a { font-weight: normal; }
+
+/* ===== SAG TARAF ===== */
+#sag { float: right; width: 600px; }
+
+/* ===== 2) UST RESIM ===== */
+#ust { position: relative; height: 310px; }
+#ust .varsayilan { display: block; width: 600px; height: 250px; }
+#ust ul { list-style: none; margin: 0; padding: 0; }
+#ust li { float: left; margin: 5px 5px 0 0; }
+#ust .kucuk { width: 70px; height: 45px; border: 2px solid #ccc; }
+#ust li:hover .kucuk { border-color: #f60; }
+#ust .buyuk { display: none; position: absolute; top: 0; left: 0; width: 600px; height: 250px; }
+#ust li:hover .buyuk { display: block; }
+
+/* ===== 3) YAPRAK ===== */
+#yaprak { position: relative; height: 280px; border: 1px solid #ccc; }
+#yaprak ul { list-style: none; margin: 0; padding: 0; }
+#yaprak li { float: left; }
+#yaprak li > a { display: block; height: 16px; line-height: 16px; padding: 8px 12px; background: #e5e5e5; border-right: 1px solid #ccc; font-weight: bold; }
+#yaprak li:hover > a { background: #f60; color: #fff; }
+#yaprak .icerik { position: absolute; top: 32px; left: 0; width: 578px; padding: 10px; background: #fff; }
+#yaprak li .icerik { display: none; }
+#yaprak li:hover .icerik { display: block; }
+.urun { float: left; width: 180px; margin-right: 10px; text-align: center; }
+.urun img { width: 150px; height: 150px; }
+.fiyat { color: #f60; font-weight: bold; }
+</style>
+</head>
+<body>
+<div id="kutu">
+
+<!-- ===== 1) YAN MENU ===== -->
+<ul id="yan">
+    <li><a href="#">Spor / Outdoor <span>&gt;</span></a>
+        <ul>
+            <li><a href="https://www.hepsiburada.com">Ayakkabı</a></li>
+            <li><a href="https://www.hepsiburada.com">Kamp</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Giyim / Ayakkabı <span>&gt;</span></a>
+        <ul>
+            <li><a href="https://www.hepsiburada.com">Erkek</a></li>
+            <li><a href="https://www.hepsiburada.com">Kadın</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Takı / Mücevher <span>&gt;</span></a>
+        <ul>
+            <li><a href="https://www.hepsiburada.com">Kolye</a></li>
+            <li><a href="https://www.hepsiburada.com">Yüzük</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Kozmetik / Bakım <span>&gt;</span></a>
+        <ul>
+            <li><a href="https://www.hepsiburada.com">Parfüm</a></li>
+            <li><a href="https://www.hepsiburada.com">Makyaj</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Anne / Bebek / Oyuncak <span>&gt;</span></a>
+        <ul>
+            <li><a href="https://www.hepsiburada.com">Bebek Arabası</a></li>
+            <li><a href="https://www.hepsiburada.com">Oyuncak</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Kitap / Film / Müzik <span>&gt;</span></a>
+        <ul>
+            <li><a href="https://www.hepsiburada.com">Kitap</a></li>
+            <li><a href="https://www.hepsiburada.com">Film</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Elektronik <span>&gt;</span></a>
+        <ul>
+            <li><a href="https://www.hepsiburada.com">Bilgisayar</a></li>
+            <li><a href="https://www.hepsiburada.com">Telefon</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Pet Shop <span>&gt;</span></a>
+        <ul>
+            <li><a href="https://www.hepsiburada.com">Kedi</a></li>
+            <li><a href="https://www.hepsiburada.com">Köpek</a></li>
+        </ul>
+    </li>
+</ul>
+
+<div id="sag">
+
+    <!-- ===== 2) UST RESIM ===== -->
+    <div id="ust">
+        <img class="varsayilan" src="resim1.jpg">
+        <ul>
+            <li><img class="kucuk" src="resim1.jpg"><img class="buyuk" src="resim1.jpg"></li>
+            <li><img class="kucuk" src="resim2.jpg"><img class="buyuk" src="resim2.jpg"></li>
+            <li><img class="kucuk" src="resim3.jpg"><img class="buyuk" src="resim3.jpg"></li>
+            <li><img class="kucuk" src="resim4.jpg"><img class="buyuk" src="resim4.jpg"></li>
+        </ul>
+    </div>
+
+    <!-- ===== 3) YAPRAK ===== -->
+    <div id="yaprak">
+        <!-- mouse hicbir yapragin uzerinde degilken gorunen icerik -->
+        <div class="icerik">
+            <div class="urun"><img src="urun1.jpg"><p>Elbise</p><p class="fiyat">32,40 TL</p></div>
+            <div class="urun"><img src="urun2.jpg"><p>Spor Ayakkabı</p><p class="fiyat">92,50 TL</p></div>
+        </div>
+        <ul>
+            <li><a href="https://www.hepsiburada.com">Çok Satanlar</a>
+                <div class="icerik">
+                    <div class="urun"><img src="urun1.jpg"><p>Elbise</p><p class="fiyat">32,40 TL</p></div>
+                    <div class="urun"><img src="urun2.jpg"><p>Spor Ayakkabı</p><p class="fiyat">92,50 TL</p></div>
+                </div>
+            </li>
+            <li><a href="https://www.hepsiburada.com">Yeni Eklenenler</a>
+                <div class="icerik">
+                    <div class="urun"><img src="urun3.jpg"><p>Oto Koltuğu</p><p class="fiyat">83,90 TL</p></div>
+                    <div class="urun"><img src="urun4.jpg"><p>Saat</p><p class="fiyat">120,00 TL</p></div>
+                </div>
+            </li>
+            <li><a href="https://www.hepsiburada.com">İndirimdekiler</a>
+                <div class="icerik">
+                    <div class="urun"><img src="urun5.jpg"><p>Telefon</p><p class="fiyat">999,00 TL</p></div>
+                    <div class="urun"><img src="urun6.jpg"><p>Laptop</p><p class="fiyat">4.500,00 TL</p></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</div>
+</body>
+</html>
